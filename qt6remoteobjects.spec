@@ -4,10 +4,10 @@
 # Using build pattern: cmake
 #
 Name     : qt6remoteobjects
-Version  : 6.5.3
-Release  : 1
-URL      : https://download.qt.io/official_releases/qt/6.5/6.5.3/submodules/qtremoteobjects-everywhere-src-6.5.3.tar.xz
-Source0  : https://download.qt.io/official_releases/qt/6.5/6.5.3/submodules/qtremoteobjects-everywhere-src-6.5.3.tar.xz
+Version  : 6.6.0
+Release  : 2
+URL      : https://download.qt.io/official_releases/qt/6.6/6.6.0/submodules/qtremoteobjects-everywhere-src-6.6.0.tar.xz
+Source0  : https://download.qt.io/official_releases/qt/6.6/6.6.0/submodules/qtremoteobjects-everywhere-src-6.6.0.tar.xz
 Summary  : No detailed summary available
 Group    : Development/Tools
 License  : BSD-3-Clause GFDL-1.3 GPL-2.0 GPL-3.0 LGPL-3.0
@@ -63,15 +63,15 @@ license components for the qt6remoteobjects package.
 
 
 %prep
-%setup -q -n qtremoteobjects-everywhere-src-6.5.3
-cd %{_builddir}/qtremoteobjects-everywhere-src-6.5.3
+%setup -q -n qtremoteobjects-everywhere-src-6.6.0
+cd %{_builddir}/qtremoteobjects-everywhere-src-6.6.0
 
 %build
 export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C.UTF-8
-export SOURCE_DATE_EPOCH=1696290641
+export SOURCE_DATE_EPOCH=1697148943
 mkdir -p clr-build
 pushd clr-build
 export GCC_IGNORE_WERROR=1
@@ -107,7 +107,7 @@ FFLAGS="$CLEAR_INTERMEDIATE_FFLAGS"
 FCFLAGS="$CLEAR_INTERMEDIATE_FCFLAGS"
 ASFLAGS="$CLEAR_INTERMEDIATE_ASFLAGS"
 LDFLAGS="$CLEAR_INTERMEDIATE_LDFLAGS"
-export SOURCE_DATE_EPOCH=1696290641
+export SOURCE_DATE_EPOCH=1697148943
 rm -rf %{buildroot}
 mkdir -p %{buildroot}/usr/share/package-licenses/qt6remoteobjects
 cp %{_builddir}/qtremoteobjects-everywhere-src-%{version}/LICENSES/BSD-3-Clause.txt %{buildroot}/usr/share/package-licenses/qt6remoteobjects/b073f11f0c81a95ab5e32aa6b5d23a5955a95274 || :
@@ -137,21 +137,21 @@ popd
 
 %files dev
 %defattr(-,root,root,-)
-/usr/include/QtRemoteObjects/6.5.3/QtRemoteObjects/private/qconnection_local_backend_p.h
-/usr/include/QtRemoteObjects/6.5.3/QtRemoteObjects/private/qconnection_tcpip_backend_p.h
-/usr/include/QtRemoteObjects/6.5.3/QtRemoteObjects/private/qconnectionfactories_p.h
-/usr/include/QtRemoteObjects/6.5.3/QtRemoteObjects/private/qremoteobjectabstractitemmodeladapter_p.h
-/usr/include/QtRemoteObjects/6.5.3/QtRemoteObjects/private/qremoteobjectabstractitemmodelreplica_p.h
-/usr/include/QtRemoteObjects/6.5.3/QtRemoteObjects/private/qremoteobjectabstractitemmodeltypes_p.h
-/usr/include/QtRemoteObjects/6.5.3/QtRemoteObjects/private/qremoteobjectcontainers_p.h
-/usr/include/QtRemoteObjects/6.5.3/QtRemoteObjects/private/qremoteobjectnode_p.h
-/usr/include/QtRemoteObjects/6.5.3/QtRemoteObjects/private/qremoteobjectpacket_p.h
-/usr/include/QtRemoteObjects/6.5.3/QtRemoteObjects/private/qremoteobjectpendingcall_p.h
-/usr/include/QtRemoteObjects/6.5.3/QtRemoteObjects/private/qremoteobjectregistrysource_p.h
-/usr/include/QtRemoteObjects/6.5.3/QtRemoteObjects/private/qremoteobjectreplica_p.h
-/usr/include/QtRemoteObjects/6.5.3/QtRemoteObjects/private/qremoteobjectsource_p.h
-/usr/include/QtRemoteObjects/6.5.3/QtRemoteObjects/private/qremoteobjectsourceio_p.h
-/usr/include/QtRemoteObjects/6.5.3/QtRemoteObjects/private/qtremoteobjects-config_p.h
+/usr/include/QtRemoteObjects/6.6.0/QtRemoteObjects/private/qconnection_local_backend_p.h
+/usr/include/QtRemoteObjects/6.6.0/QtRemoteObjects/private/qconnection_tcpip_backend_p.h
+/usr/include/QtRemoteObjects/6.6.0/QtRemoteObjects/private/qconnectionfactories_p.h
+/usr/include/QtRemoteObjects/6.6.0/QtRemoteObjects/private/qremoteobjectabstractitemmodeladapter_p.h
+/usr/include/QtRemoteObjects/6.6.0/QtRemoteObjects/private/qremoteobjectabstractitemmodelreplica_p.h
+/usr/include/QtRemoteObjects/6.6.0/QtRemoteObjects/private/qremoteobjectabstractitemmodeltypes_p.h
+/usr/include/QtRemoteObjects/6.6.0/QtRemoteObjects/private/qremoteobjectcontainers_p.h
+/usr/include/QtRemoteObjects/6.6.0/QtRemoteObjects/private/qremoteobjectnode_p.h
+/usr/include/QtRemoteObjects/6.6.0/QtRemoteObjects/private/qremoteobjectpacket_p.h
+/usr/include/QtRemoteObjects/6.6.0/QtRemoteObjects/private/qremoteobjectpendingcall_p.h
+/usr/include/QtRemoteObjects/6.6.0/QtRemoteObjects/private/qremoteobjectregistrysource_p.h
+/usr/include/QtRemoteObjects/6.6.0/QtRemoteObjects/private/qremoteobjectreplica_p.h
+/usr/include/QtRemoteObjects/6.6.0/QtRemoteObjects/private/qremoteobjectsource_p.h
+/usr/include/QtRemoteObjects/6.6.0/QtRemoteObjects/private/qremoteobjectsourceio_p.h
+/usr/include/QtRemoteObjects/6.6.0/QtRemoteObjects/private/qtremoteobjects-config_p.h
 /usr/include/QtRemoteObjects/QAbstractItemModelReplica
 /usr/include/QtRemoteObjects/QConnectionAbstractServer
 /usr/include/QtRemoteObjects/QIntHash
@@ -191,11 +191,8 @@ popd
 /usr/include/QtRemoteObjects/qtremoteobjects-config.h
 /usr/include/QtRemoteObjects/qtremoteobjectsexports.h
 /usr/include/QtRemoteObjects/qtremoteobjectsversion.h
-/usr/include/QtRepParser/QtRepParser
 /usr/include/QtRepParser/QtRepParserDepends
-/usr/include/QtRepParser/QtRepParserVersion
 /usr/include/QtRepParser/parser.g
-/usr/include/QtRepParser/qtrepparserversion.h
 /usr/lib64/cmake/Qt6BuildInternals/StandaloneTests/QtRemoteObjectsTestsConfig.cmake
 /usr/lib64/cmake/Qt6RemoteObjects/Qt6RemoteObjectsAdditionalTargetInfo.cmake
 /usr/lib64/cmake/Qt6RemoteObjects/Qt6RemoteObjectsConfig.cmake
@@ -229,7 +226,7 @@ popd
 %files lib
 %defattr(-,root,root,-)
 /usr/lib64/libQt6RemoteObjects.so.6
-/usr/lib64/libQt6RemoteObjects.so.6.5.3
+/usr/lib64/libQt6RemoteObjects.so.6.6.0
 
 %files libexec
 %defattr(-,root,root,-)
