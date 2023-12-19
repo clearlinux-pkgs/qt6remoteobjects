@@ -7,7 +7,7 @@
 #
 Name     : qt6remoteobjects
 Version  : 6.6.1
-Release  : 4
+Release  : 5
 URL      : https://download.qt.io/official_releases/qt/6.6/6.6.1/submodules/qtremoteobjects-everywhere-src-6.6.1.tar.xz
 Source0  : https://download.qt.io/official_releases/qt/6.6/6.6.1/submodules/qtremoteobjects-everywhere-src-6.6.1.tar.xz
 Summary  : No detailed summary available
@@ -74,7 +74,7 @@ export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C.UTF-8
-export SOURCE_DATE_EPOCH=1703008678
+export SOURCE_DATE_EPOCH=1703026455
 mkdir -p clr-build
 pushd clr-build
 export GCC_IGNORE_WERROR=1
@@ -110,7 +110,7 @@ FFLAGS="$CLEAR_INTERMEDIATE_FFLAGS"
 FCFLAGS="$CLEAR_INTERMEDIATE_FCFLAGS"
 ASFLAGS="$CLEAR_INTERMEDIATE_ASFLAGS"
 LDFLAGS="$CLEAR_INTERMEDIATE_LDFLAGS"
-export SOURCE_DATE_EPOCH=1703008678
+export SOURCE_DATE_EPOCH=1703026455
 rm -rf %{buildroot}
 mkdir -p %{buildroot}/usr/share/package-licenses/qt6remoteobjects
 cp %{_builddir}/qtremoteobjects-everywhere-src-%{version}/LICENSES/BSD-3-Clause.txt %{buildroot}/usr/share/package-licenses/qt6remoteobjects/b073f11f0c81a95ab5e32aa6b5d23a5955a95274 || :
@@ -125,6 +125,7 @@ popd
 %files
 %defattr(-,root,root,-)
 /usr/lib64/qt6/metatypes/qt6remoteobjects_relwithdebinfo_metatypes.json
+/usr/lib64/qt6/metatypes/qt6remoteobjectsqml_relwithdebinfo_metatypes.json
 /usr/lib64/qt6/mkspecs/features/remoteobjects_repc.prf
 /usr/lib64/qt6/mkspecs/features/repcclient.pri
 /usr/lib64/qt6/mkspecs/features/repccommon.pri
@@ -133,10 +134,15 @@ popd
 /usr/lib64/qt6/mkspecs/features/repparser.prf
 /usr/lib64/qt6/mkspecs/modules/qt_lib_remoteobjects.pri
 /usr/lib64/qt6/mkspecs/modules/qt_lib_remoteobjects_private.pri
+/usr/lib64/qt6/mkspecs/modules/qt_lib_remoteobjectsqml.pri
+/usr/lib64/qt6/mkspecs/modules/qt_lib_remoteobjectsqml_private.pri
 /usr/lib64/qt6/mkspecs/modules/qt_lib_repparser.pri
 /usr/lib64/qt6/mkspecs/modules/qt_lib_repparser_private.pri
 /usr/lib64/qt6/modules/RemoteObjects.json
+/usr/lib64/qt6/modules/RemoteObjectsQml.json
 /usr/lib64/qt6/modules/RepParser.json
+/usr/lib64/qt6/qml/QtRemoteObjects/plugins.qmltypes
+/usr/lib64/qt6/qml/QtRemoteObjects/qmldir
 
 %files dev
 %defattr(-,root,root,-)
@@ -194,9 +200,20 @@ popd
 /usr/include/QtRemoteObjects/qtremoteobjects-config.h
 /usr/include/QtRemoteObjects/qtremoteobjectsexports.h
 /usr/include/QtRemoteObjects/qtremoteobjectsversion.h
+/usr/include/QtRemoteObjectsQml/6.6.1/QtRemoteObjectsQml/private/qremoteobjectsqml_p.h
+/usr/include/QtRemoteObjectsQml/QtRemoteObjectsQml
+/usr/include/QtRemoteObjectsQml/QtRemoteObjectsQmlDepends
+/usr/include/QtRemoteObjectsQml/QtRemoteObjectsQmlVersion
+/usr/include/QtRemoteObjectsQml/qtremoteobjectsqmlversion.h
 /usr/include/QtRepParser/QtRepParserDepends
 /usr/include/QtRepParser/parser.g
 /usr/lib64/cmake/Qt6BuildInternals/StandaloneTests/QtRemoteObjectsTestsConfig.cmake
+/usr/lib64/cmake/Qt6Qml/QmlPlugins/Qt6declarative_remoteobjectsAdditionalTargetInfo.cmake
+/usr/lib64/cmake/Qt6Qml/QmlPlugins/Qt6declarative_remoteobjectsConfig.cmake
+/usr/lib64/cmake/Qt6Qml/QmlPlugins/Qt6declarative_remoteobjectsConfigVersion.cmake
+/usr/lib64/cmake/Qt6Qml/QmlPlugins/Qt6declarative_remoteobjectsConfigVersionImpl.cmake
+/usr/lib64/cmake/Qt6Qml/QmlPlugins/Qt6declarative_remoteobjectsTargets-relwithdebinfo.cmake
+/usr/lib64/cmake/Qt6Qml/QmlPlugins/Qt6declarative_remoteobjectsTargets.cmake
 /usr/lib64/cmake/Qt6RemoteObjects/Qt6RemoteObjectsAdditionalTargetInfo.cmake
 /usr/lib64/cmake/Qt6RemoteObjects/Qt6RemoteObjectsConfig.cmake
 /usr/lib64/cmake/Qt6RemoteObjects/Qt6RemoteObjectsConfigVersion.cmake
@@ -206,6 +223,14 @@ popd
 /usr/lib64/cmake/Qt6RemoteObjects/Qt6RemoteObjectsTargets-relwithdebinfo.cmake
 /usr/lib64/cmake/Qt6RemoteObjects/Qt6RemoteObjectsTargets.cmake
 /usr/lib64/cmake/Qt6RemoteObjects/Qt6RemoteObjectsVersionlessTargets.cmake
+/usr/lib64/cmake/Qt6RemoteObjectsQml/Qt6RemoteObjectsQmlAdditionalTargetInfo.cmake
+/usr/lib64/cmake/Qt6RemoteObjectsQml/Qt6RemoteObjectsQmlConfig.cmake
+/usr/lib64/cmake/Qt6RemoteObjectsQml/Qt6RemoteObjectsQmlConfigVersion.cmake
+/usr/lib64/cmake/Qt6RemoteObjectsQml/Qt6RemoteObjectsQmlConfigVersionImpl.cmake
+/usr/lib64/cmake/Qt6RemoteObjectsQml/Qt6RemoteObjectsQmlDependencies.cmake
+/usr/lib64/cmake/Qt6RemoteObjectsQml/Qt6RemoteObjectsQmlTargets-relwithdebinfo.cmake
+/usr/lib64/cmake/Qt6RemoteObjectsQml/Qt6RemoteObjectsQmlTargets.cmake
+/usr/lib64/cmake/Qt6RemoteObjectsQml/Qt6RemoteObjectsQmlVersionlessTargets.cmake
 /usr/lib64/cmake/Qt6RemoteObjectsTools/Qt6RemoteObjectsToolsAdditionalTargetInfo.cmake
 /usr/lib64/cmake/Qt6RemoteObjectsTools/Qt6RemoteObjectsToolsConfig.cmake
 /usr/lib64/cmake/Qt6RemoteObjectsTools/Qt6RemoteObjectsToolsConfigVersion.cmake
@@ -223,13 +248,19 @@ popd
 /usr/lib64/cmake/Qt6RepParser/Qt6RepParserVersionlessTargets.cmake
 /usr/lib64/libQt6RemoteObjects.prl
 /usr/lib64/libQt6RemoteObjects.so
+/usr/lib64/libQt6RemoteObjectsQml.prl
+/usr/lib64/libQt6RemoteObjectsQml.so
 /usr/lib64/pkgconfig/Qt6RemoteObjects.pc
+/usr/lib64/pkgconfig/Qt6RemoteObjectsQml.pc
 /usr/lib64/pkgconfig/Qt6RepParser.pc
 
 %files lib
 %defattr(-,root,root,-)
 /usr/lib64/libQt6RemoteObjects.so.6
 /usr/lib64/libQt6RemoteObjects.so.6.6.1
+/usr/lib64/libQt6RemoteObjectsQml.so.6
+/usr/lib64/libQt6RemoteObjectsQml.so.6.6.1
+/usr/lib64/qt6/qml/QtRemoteObjects/libdeclarative_remoteobjectsplugin.so
 
 %files libexec
 %defattr(-,root,root,-)
