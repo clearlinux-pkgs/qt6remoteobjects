@@ -66,7 +66,3 @@ libQt6RemoteObjects.so.6:QtROServerIoDevice::QtROServerIoDevice(QObject*)@@Qt_6
 libQt6RemoteObjects.so.6:Qt_6
 libQt6RemoteObjects.so.6:Qt_6_PRIVATE_API
 libQt6RemoteObjects.so.6:SourceApiMap::~SourceApiMap()@@Qt_6
-libQt6RemoteObjectsQml.so.6:NonQt
-libQt6RemoteObjectsQml.so.6:Qt_6
-libQt6RemoteObjectsQml.so.6:Qt_6_PRIVATE_API
-libQt6RemoteObjectsQml.so.6:qml_register_types_QtRemoteObjects()@@Qt_6
